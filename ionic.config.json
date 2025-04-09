@@ -1,0 +1,7 @@
+{
+  "name": "run-quest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
