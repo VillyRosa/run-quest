@@ -1,7 +1,7 @@
 <ion-content class="ion-padding">
   <div class="container">
     <h1 class="title">Bem vindo de volta!</h1>
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <ion-item>
         <ion-input label="E-mail" type="email" label-placement="floating" fill="outline" placeholder="Insira seu e-mail" />
       </ion-item>
