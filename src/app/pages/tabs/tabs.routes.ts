@@ -3,6 +3,7 @@ import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
 import { ChallengesPage } from '../challenges/challenges.page';
 import { RacePage } from '../race/race.page';
+import { ProfilePage } from '../profile/profile.page';
 
 export const routes: Routes = [
   {
@@ -12,6 +13,7 @@ export const routes: Routes = [
       { path: 'home', component: HomePage },
       { path: 'home/race', component: RacePage },
       { path: 'challenges', component: ChallengesPage },
+      { path: 'profile', component: ProfilePage },
     ],
   },
   {
