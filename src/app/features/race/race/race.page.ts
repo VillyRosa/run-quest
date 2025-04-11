@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
-import { RunService } from 'src/app/services/run.service';
+import { RunService } from 'src/app/features/race/run.service';
 
 @Component({
   selector: 'app-race',

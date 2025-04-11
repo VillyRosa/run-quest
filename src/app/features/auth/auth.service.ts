@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastService } from './toast.service';
+import { ToastService } from '../../shared/services/toast.service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { RunRecord } from '../types/RunRecord';
+import { RunRecord } from '../../shared/models/RunRecord';
 
 @Injectable({
   providedIn: 'root'

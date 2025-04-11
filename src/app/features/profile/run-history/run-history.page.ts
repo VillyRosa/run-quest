@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonRippleEffect, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonList } from '@ionic/angular/standalone';
-import { RunHistoryService } from 'src/app/services/run-history.service';
+import { RunHistoryService } from 'src/app/features/race/run-history.service';
 
 @Component({
   selector: 'app-run-history',

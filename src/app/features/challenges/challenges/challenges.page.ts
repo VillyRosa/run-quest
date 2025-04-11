@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonRippleEffect } from '@ionic/angular/standalone';
-import { ChallengesService } from 'src/app/services/challenges.service';
+import { ChallengesService } from 'src/app/features/challenges/challenges.service';
 
 @Component({
   selector: 'app-challenges',
