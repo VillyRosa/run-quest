@@ -1,12 +1,12 @@
 <ion-content class="ion-padding">
   <div class="container">
     <div class="text-align">
-      <h1>3,45</h1>
+      <h1>{{ (distance$ | async) | number: '1.2-2' }}</h1>
       <span>km</span>
     </div>
     <div class="text-align">
       <h3>{{ timer$ | async }}</h3>
     </div>
   </div>
-  <ion-button expand="block">Finalizar</ion-button>
+  <ion-button expand="block" (click)="onFinish()">Finalizar</ion-button>
 </ion-content>

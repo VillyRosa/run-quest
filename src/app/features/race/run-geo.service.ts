@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Geolocation } from '@capacitor/geolocation';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 type SimpleCoords = {
   latitude: number;
@@ -14,7 +15,9 @@ export class RunGeoService {
   private lastPosition: SimpleCoords | null = null
 
   private _distance = signal(0);
-  public distance = this._distance.asReadonly();
+  private _distanceSubject = new BehaviorSubject<number>(this._distance());
+
+  public distance: Observable<number> = this._distanceSubject.asObservable();
 
   public async startTracking(): Promise<void> {
     if (this.watchId) return;
@@ -43,6 +46,7 @@ export class RunGeoService {
 
     this.lastPosition = null;
     this._distance.set(0);
+    this._distanceSubject.next(0);
   }
 
   private updateDistance(coords: SimpleCoords): void {
@@ -55,6 +59,7 @@ export class RunGeoService {
       );
 
       this._distance.update(current => current + delta);
+      this._distanceSubject.next(this._distance());
     }
 
     this.lastPosition = coords;

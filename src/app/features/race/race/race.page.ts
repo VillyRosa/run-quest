@@ -14,6 +14,7 @@ import { RunService } from 'src/app/features/race/run.service';
 export class RacePage {
   private runService = inject(RunService);
   public timer$ = this.runService.getTime();
+  public distance$ = this.runService.getDistance();
 
   public ionViewDidEnter(): void {
     this.runService.start();
