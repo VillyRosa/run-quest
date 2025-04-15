@@ -25,6 +25,11 @@ export class RunService {
     this.geoService.stopTracking();
   }
 
+  public async finishRun(): Promise<number | string> {
+    this.pause();
+    return 1;
+  }
+
   public reset(): void {
     this.timerService.resetTimer();
     this.geoService.stopTracking();

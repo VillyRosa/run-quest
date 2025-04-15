@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
 import { RunService } from 'src/app/features/race/run.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-race',
@@ -13,6 +14,8 @@ import { RunService } from 'src/app/features/race/run.service';
 })
 export class RacePage {
   private runService = inject(RunService);
+  private router = inject(Router);
+
   public timer$ = this.runService.getTime();
   public distance$ = this.runService.getDistance();
 
@@ -20,7 +23,8 @@ export class RacePage {
     this.runService.start();
   }
 
-  public onFinish(): void {
-    this.runService.stop();
+  public async onFinish(): Promise<void> {
+    const id = await this.runService.finishRun();
+    this.router.navigate(['/home/race-result', id]);
   }
 }
