@@ -1,4 +1,7 @@
 {
   "LOGIN": "Entrar",
-  "REGISTER": "Criar conta"
+  "REGISTER": "Criar conta",
+  "HOME": "Início",
+  "CHALLENGES": "Desafios",
+  "PROFILE": "Perfil"
 }

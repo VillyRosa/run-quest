@@ -1,4 +1,7 @@
 {
   "LOGIN": "Login",
-  "REGISTER": "Register"
+  "REGISTER": "Register",
+  "HOME": "Home",
+  "CHALLENGES": "Challenges",
+  "PROFILE": "Profile"
 }
