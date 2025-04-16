@@ -4,5 +4,7 @@
   "HOME": "Home",
   "CHALLENGES": "Challenges",
   "PROFILE": "Profile",
-  "RUN": "Run"
+  "RUN": "Run",
+  "WELCOME": "Welcome",
+  "LOGOUT_SUCCESS": "Logout successful"
 }
