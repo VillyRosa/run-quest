@@ -12,5 +12,11 @@
   </ion-header>
 
   <ion-list>
+    <ion-item>
+      <ion-select label="Idioma" placeholder="Insira um idioma" [value]="selectedLang" (ionChange)="changeLang($event)">
+        <ion-select-option value="pt">Português</ion-select-option>
+        <ion-select-option value="en">Inglês</ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
 </ion-content>
