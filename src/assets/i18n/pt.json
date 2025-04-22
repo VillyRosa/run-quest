@@ -6,5 +6,10 @@
   "PROFILE": "Perfil",
   "RUN": "Correr",
   "WELCOME": "Bem-vindo",
-  "LOGOUT_SUCCESS": "Deslogado com sucesso"
+  "LOGOUT_SUCCESS": "Deslogado com sucesso",
+  "CONFIGURATIONS": "Configurações",
+  "LANGUAGE": "Idioma",
+  "SELECT_LANGUAGE": "Selecione o idioma",
+  "PORTUGUESE": "Português",
+  "ENGLISH": "Inglês"
 }

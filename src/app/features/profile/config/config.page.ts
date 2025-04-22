@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonSelect, IonSelectOption } from '@ionic/angular/standalone';
 import { LanguageService } from 'src/app/shared/services/language.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-config',
   templateUrl: './config.page.html',
   styleUrls: ['./config.page.scss'],
   standalone: true,
-  imports: [IonSelectOption, IonSelect, IonItem, IonList, IonTitle, IonToolbar, IonHeader, IonContent, CommonModule, FormsModule]
+  imports: [IonSelectOption, IonSelect, IonItem, IonList, IonTitle, IonToolbar, IonHeader, IonContent, CommonModule, FormsModule, TranslateModule]
 })
 export class ConfigPage {
   private languageService = inject(LanguageService);

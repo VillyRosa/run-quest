@@ -1,21 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Configurações</ion-title>
+    <ion-title>{{ 'CONFIGURATIONS' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Configurações</ion-title>
+      <ion-title size="large">{{ 'CONFIGURATIONS' | translate }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-list>
     <ion-item>
-      <ion-select label="Idioma" placeholder="Insira um idioma" [value]="selectedLang" (ionChange)="changeLang($event)">
-        <ion-select-option value="pt">Português</ion-select-option>
-        <ion-select-option value="en">Inglês</ion-select-option>
+      <ion-select [label]="'LANGUAGE' | translate" [placeholder]="'SELECT_LANGUAGE' | translate" [value]="selectedLang" (ionChange)="changeLang($event)">
+        <ion-select-option value="pt">{{ 'PORTUGUESE' | translate }}</ion-select-option>
+        <ion-select-option value="en">{{ 'ENGLISH' | translate }}</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>
