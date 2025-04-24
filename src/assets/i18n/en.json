@@ -17,5 +17,7 @@
   "DURATION": "Duration",
   "START_TIME": "Start Time",
   "NO_RUNS": "No runs found",
-  "FINISH": "Finish"
+  "FINISH": "Finish",
+  "HISTORY": "History",
+  "LOGOUT": "Logout"
 }
