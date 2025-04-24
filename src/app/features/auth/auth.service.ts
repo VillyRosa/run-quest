@@ -5,6 +5,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { LoadingController } from '@ionic/angular';
 import { TokenService } from 'src/app/shared/services/token.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/shared/models/User';
+import { Register } from './Register';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +31,21 @@ export class AuthService {
       },
       error: () => {
         this.toastService.error('Erro ao tentar autenticar. Tente novamente.');
+      }
+    }).add(() => loading.dismiss());
+  }
+
+  public async register(register: Register): Promise<void> {
+    const loading = await this.loadingCtrl.create();
+    await loading.present();
+
+    this.http.post<User>('auth/register', register).subscribe({
+      next: (resp) => {
+        this.toastService.success('Conta criada com sucesso! Logando...');
+        this.login(resp.email, register.password);
+      },
+      error: () => {
+        this.toastService.error('Erro ao tentar registrar. Tente novamente.');
       }
     }).add(() => loading.dismiss());
   }

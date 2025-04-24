@@ -1,20 +1,20 @@
 <ion-content class="ion-padding">
   <div class="container">
     <h1 class="title">Cadastre-se para começar</h1>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <ion-item>
-        <ion-input label="Usuário" type="text" label-placement="floating" fill="outline" placeholder="Insira um nome de usuário" />
+        <ion-input formControlName="username" label="Usuário" type="text" label-placement="floating" fill="outline" placeholder="Insira um nome de usuário" />
       </ion-item>
       <ion-item>
-        <ion-input label="E-mail" type="email" label-placement="floating" fill="outline" placeholder="Insira um e-mail" />
+        <ion-input formControlName="email" label="E-mail" type="email" label-placement="floating" fill="outline" placeholder="Insira um e-mail" />
       </ion-item>
       <ion-item>
-        <ion-input label="Senha" type="password" label-placement="floating" fill="outline" placeholder="Insira uma senha">
+        <ion-input formControlName="password" label="Senha" type="password" label-placement="floating" fill="outline" placeholder="Insira uma senha">
           <ion-input-password-toggle slot="end" />
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-input label="Confirmar senha" type="password" label-placement="floating" fill="outline" placeholder="Confirme sua senha">
+        <ion-input formControlName="confirmPassword" label="Confirmar senha" type="password" label-placement="floating" fill="outline" placeholder="Confirme sua senha">
           <ion-input-password-toggle slot="end" />
         </ion-input>
       </ion-item>
