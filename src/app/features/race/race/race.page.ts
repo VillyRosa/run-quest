@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonButton } from '@ionic/angular/standalone';
 import { RunService } from 'src/app/features/race/run.service';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-race',
   templateUrl: './race.page.html',
   styleUrls: ['./race.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, CommonModule, FormsModule]
+  imports: [IonButton, IonContent, CommonModule, FormsModule, TranslateModule]
 })
 export class RacePage {
   private runService = inject(RunService);

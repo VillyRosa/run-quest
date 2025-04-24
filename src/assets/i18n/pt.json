@@ -16,5 +16,6 @@
   "DISTANCE": "Distância",
   "DURATION": "Duração",
   "START_TIME": "Hora de inicio",
-  "NO_RUNS": "Nenhuma corrida encontrada"
+  "NO_RUNS": "Nenhuma corrida encontrada",
+  "FINISH": "Finalizar"
 }

@@ -16,5 +16,6 @@
   "DISTANCE": "Distance",
   "DURATION": "Duration",
   "START_TIME": "Start Time",
-  "NO_RUNS": "No runs found"
+  "NO_RUNS": "No runs found",
+  "FINISH": "Finish"
 }
