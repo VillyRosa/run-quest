@@ -11,5 +11,10 @@
   "LANGUAGE": "Idioma",
   "SELECT_LANGUAGE": "Selecione o idioma",
   "PORTUGUESE": "Português",
-  "ENGLISH": "Inglês"
+  "ENGLISH": "Inglês",
+  "RUN_HISTORY": "Histórico de Corridas",
+  "DISTANCE": "Distância",
+  "DURATION": "Duração",
+  "START_TIME": "Hora de inicio",
+  "NO_RUNS": "Nenhuma corrida encontrada"
 }

@@ -11,5 +11,10 @@
   "LANGUAGE": "Language",
   "SELECT_LANGUAGE": "Select language",
   "PORTUGUESE": "Portuguese",
-  "ENGLISH": "English"
+  "ENGLISH": "English",
+  "RUN_HISTORY": "Run History",
+  "DISTANCE": "Distance",
+  "DURATION": "Duration",
+  "START_TIME": "Start Time",
+  "NO_RUNS": "No runs found"
 }

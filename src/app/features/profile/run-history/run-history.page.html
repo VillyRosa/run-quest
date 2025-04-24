@@ -1,5 +1,5 @@
 <ion-content class="ion-padding">
-  <h1>Histórico de Corridas</h1>
+  <h1>{{ 'RUN_HISTORY' | translate }}</h1>
 
   <ion-list>
     @if ((pageableRuns$ | async); as page) {
@@ -8,19 +8,19 @@
           <ion-card class="ion-activatable">
             <ion-ripple-effect></ion-ripple-effect>
             <ion-card-header>
-              <ion-card-title>Corrida</ion-card-title>
+              <ion-card-title>{{ 'RUN' | translate }}</ion-card-title>
             </ion-card-header>
             <ion-card-content>
               <div class="run-card">
-                <p>Distância: {{ run.distance }} km</p>
-                <p>Tempo: {{ run.duration }}s</p>
-                <p>Início: {{ run.startTime | date:'short' }}</p>
+                <p>{{ 'DISTANCE' | translate }}: {{ run.distance }} km</p>
+                <p>{{ 'DURATION' | translate }}: {{ run.duration }}s</p>
+                <p>{{ 'START_TIME' | translate }}: {{ run.startTime | date:'short' }}</p>
               </div>
             </ion-card-content>
           </ion-card>
         }
       } @else {
-        <p>Você ainda não tem corridas salvas.</p>
+        <p>{{ 'NO_RUNS' | translate }}</p>
       }
     }
   </ion-list>
