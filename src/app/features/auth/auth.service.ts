@@ -4,6 +4,7 @@ import { ToastService } from '../../shared/services/toast.service';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { LoadingController } from '@ionic/angular';
+import { TokenService } from 'src/app/shared/services/token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class AuthService {
 
     this.http.post<string>('auth/login', { email, password}, { responseType: 'text' as 'json' }).subscribe({
       next: (response: string) => {
-        localStorage.setItem('token', response);
+        TokenService.setToken(response);
         this.router.navigate(['/']);
         this.toastService.success(this.translate.instant('WELCOME') + '!');
       },
@@ -32,12 +33,8 @@ export class AuthService {
   }
 
   public logout(): void {
-    localStorage.removeItem('token');
+    TokenService.removeToken();
     this.router.navigate(['/auth-start']);
     this.toastService.success(this.translate.instant('LOGOUT_SUCCESS') + '!');
-  }
-
-  public isAuthenticated(): boolean {
-    return !!localStorage.getItem('token');
   }
 }
