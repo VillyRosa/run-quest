@@ -1,25 +1,27 @@
 <ion-content class="ion-padding">
   <h1>Histórico de Corridas</h1>
-  <ion-list>
-    @for (run of runs(); track run.id) {
-      <ion-card class="ion-activatable">
-        <ion-ripple-effect></ion-ripple-effect>
-        <ion-card-header>
-          <ion-card-title>Corrida</ion-card-title>
-        </ion-card-header>
 
-        <ion-card-content>
-          <div class="run-card">
-            <p>Distância: {{ run.distance }} km</p>
-            <p>Tempo: {{ run.duration }}s</p>
-            <p>Data: {{ run.date | date:'short' }}</p>
-          </div>
-        </ion-card-content>
-      </ion-card>
+  <ion-list>
+    @if ((pageableRuns$ | async); as page) {
+      @if (page.content.length > 0) {
+        @for (run of page.content; track run.id) {
+          <ion-card class="ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-card-header>
+              <ion-card-title>Corrida</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="run-card">
+                <p>Distância: {{ run.distance }} km</p>
+                <p>Tempo: {{ run.duration }}s</p>
+                <p>Início: {{ run.startTime | date:'short' }}</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        }
+      } @else {
+        <p>Você ainda não tem corridas salvas.</p>
+      }
     }
   </ion-list>
-
-  @if (runs().length === 0) {
-    <p>Você ainda não tem corridas salvas.</p>
-  }
 </ion-content>

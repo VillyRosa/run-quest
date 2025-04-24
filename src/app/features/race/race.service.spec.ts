@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RunHistoryService } from './run-history.service';
+import { RaceService } from './race.service';
 
 describe('RunHistoryService', () => {
-  let service: RunHistoryService;
+  let service: RaceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RunHistoryService);
+    service = TestBed.inject(RaceService);
   });
 
   it('should be created', () => {
