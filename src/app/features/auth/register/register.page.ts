@@ -18,10 +18,10 @@ export class RegisterPage {
   private toastService = inject(ToastService);
 
   public form: FormGroup = this.fb.group({
-    username: ['Jaozinn', [Validators.required]],
-    email: ['jaozin@email.com', [Validators.required, Validators.email]],
-    password: ['123456', [Validators.required]],
-    confirmPassword: ['123456', [Validators.required]]
+    username: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required]],
+    confirmPassword: ['', [Validators.required]]
   });
 
   public onSubmit(): void {
