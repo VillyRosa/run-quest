@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { DecodedToken } from '../models/DecodedToken';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +22,35 @@ export class TokenService {
 
   public static hasToken(): boolean {
     return !!localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  public static decodeToken(): DecodedToken | null {
+    const token = this.getToken();
+    if (!token) return null;
+
+    try {
+      return jwtDecode<DecodedToken>(token);
+    } catch (error) {
+      console.error('Error decoding token:', error);
+      return null;
+    }
+  }
+
+  public static getUserId(): string | null {
+    const decoded = this.decodeToken();
+    return decoded?.sub || null;
+  }
+
+  public static getUserName(): string | null {
+    const decoded = this.decodeToken();
+    return decoded?.username || null;
+  }
+
+  public static isTokenExpired(): boolean {
+    const decoded = this.decodeToken();
+    if (!decoded) return true;
+
+    const now = Date.now() / 1000;
+    return decoded.exp < now;
   }
 }
