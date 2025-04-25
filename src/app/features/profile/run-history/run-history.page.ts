@@ -5,13 +5,14 @@ import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonLi
 import { RaceService } from 'src/app/features/race/race.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { TokenService } from 'src/app/shared/services/token.service';
+import { SecondsToTimePipe } from 'src/app/shared/pipes/seconds-to-time.pipe';
 
 @Component({
   selector: 'app-run-history',
   templateUrl: './run-history.page.html',
   styleUrls: ['./run-history.page.scss'],
   standalone: true,
-  imports: [IonRippleEffect, IonList, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonContent, CommonModule, FormsModule, TranslateModule]
+  imports: [IonRippleEffect, IonList, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonContent, CommonModule, FormsModule, TranslateModule, SecondsToTimePipe]
 })
 export class RunHistoryPage {
   private raceService = inject(RaceService);

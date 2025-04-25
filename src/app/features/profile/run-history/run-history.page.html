@@ -13,7 +13,7 @@
             <ion-card-content>
               <div class="run-card">
                 <p>{{ 'DISTANCE' | translate }}: {{ run.distance }} km</p>
-                <p>{{ 'DURATION' | translate }}: {{ run.duration }}s</p>
+                <p>{{ 'DURATION' | translate }}: {{ run.duration | secondsToTime }}</p>
                 <p>{{ 'START_TIME' | translate }}: {{ run.startTime | date:'short' }}</p>
               </div>
             </ion-card-content>
