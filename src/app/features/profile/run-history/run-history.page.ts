@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonList, IonRippleEffect } from '@ionic/angular/standalone';
 import { RaceService } from 'src/app/features/race/race.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { TokenService } from 'src/app/shared/services/token.service';
 
 @Component({
   selector: 'app-run-history',
@@ -14,5 +15,5 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class RunHistoryPage {
   private raceService = inject(RaceService);
-  public pageableRuns$ = this.raceService.getAll();
+  public pageableRuns$ = this.raceService.getAll(TokenService.getUserId() || '');
 }

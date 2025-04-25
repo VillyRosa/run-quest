@@ -11,8 +11,8 @@ import { NewRace } from 'src/app/shared/models/NewRace';
 export class RaceService {
   private http = inject(HttpClient);
 
-  public getAll(): Observable<RacePage> {
-    return this.http.get<RacePage>('races');
+  public getAll(userId: string = ''): Observable<RacePage> {
+    return this.http.get<RacePage>('races?userId=' + userId);
   }
 
   public getById(id: string): Observable<Race> {
