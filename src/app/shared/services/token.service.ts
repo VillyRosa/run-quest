@@ -4,19 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TokenService {
+  private static readonly TOKEN_KEY = 'token';
+
   public static getToken(): string | null {
-    return localStorage.getItem('token');
+    return localStorage.getItem(this.TOKEN_KEY);
   }
 
   public static setToken(token: string): void {
-    localStorage.setItem('token', token);
+    localStorage.setItem(this.TOKEN_KEY, token);
   }
 
   public static removeToken(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem(this.TOKEN_KEY);
   }
 
   public static hasToken(): boolean {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem(this.TOKEN_KEY);
   }
 }
