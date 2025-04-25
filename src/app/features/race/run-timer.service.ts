@@ -33,6 +33,10 @@ export class RunTimerService {
     this.timer$.next(this.elapsedSeconds);
   }
 
+  public getElapsedSeconds(): number {
+    return this.elapsedSeconds;
+  }
+
   private formatTime(totalSeconds: number): string {
     const hours = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
     const minutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');

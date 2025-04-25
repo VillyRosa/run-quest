@@ -49,6 +49,10 @@ export class RunGeoService {
     this._distanceSubject.next(0);
   }
 
+  public getCurrentDistance(): number {
+    return this._distance();
+  }
+
   private updateDistance(coords: SimpleCoords): void {
     if (this.lastPosition) {
       const delta = this.calculateDistance(

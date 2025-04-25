@@ -25,7 +25,11 @@ export class RacePage {
   }
 
   public async onFinish(): Promise<void> {
-    const id = await this.runService.finishRun();
-    this.router.navigate(['/home/race-result', id]);
+    try {
+      const id = await this.runService.finishRun();
+      this.router.navigate(['/home/race-result', id]);
+    } catch (error) {
+      console.error('Error finishing run:', error);
+    }
   }
 }
