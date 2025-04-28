@@ -4,8 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeService {
+  private static readonly THEME_KEY = 'theme';
+
   public static getCurrentTheme(): 'light' | 'dark' | 'system' {
-    return localStorage.getItem('theme') as 'light' | 'dark' | 'system' || 'system';
+    return localStorage.getItem(this.THEME_KEY) as 'light' | 'dark' | 'system' || 'system';
   }
 
   public static getSystemTheme(): 'light' | 'dark' {
@@ -13,7 +15,7 @@ export class ThemeService {
   }
 
   public static setTheme(theme: 'light' | 'dark' | 'system'): void {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem(this.THEME_KEY, theme);
     document.documentElement.classList.toggle(
       'ion-palette-dark',
       theme === 'dark' || (theme === 'system' && this.getSystemTheme() === 'dark')
