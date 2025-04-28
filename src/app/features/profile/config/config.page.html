@@ -18,5 +18,13 @@
         <ion-select-option value="en">{{ 'ENGLISH' | translate }}</ion-select-option>
       </ion-select>
     </ion-item>
+
+    <ion-item>
+      <ion-select [label]="'THEME' | translate" [placeholder]="'SELECT_THEME' | translate" [value]="selectedTheme" (ionChange)="changeTheme($event)">
+        <ion-select-option value="light">{{ 'LIGHT' | translate }}</ion-select-option>
+        <ion-select-option value="dark">{{ 'DARK' | translate }}</ion-select-option>
+        <ion-select-option value="system">{{ 'SYSTEM' | translate }}</ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
 </ion-content>

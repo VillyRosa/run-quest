@@ -19,5 +19,10 @@
   "NO_RUNS": "Nenhuma corrida encontrada",
   "FINISH": "Finalizar",
   "HISTORY": "Histórico",
-  "LOGOUT": "Sair"
+  "LOGOUT": "Sair",
+  "THEME": "Tema",
+  "SELECT_THEME": "Selecione o tema",
+  "LIGHT": "Claro",
+  "DARK": "Escuro",
+  "SYSTEM": "Sistema"
 }

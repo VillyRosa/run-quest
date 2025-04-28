@@ -19,5 +19,10 @@
   "NO_RUNS": "No runs found",
   "FINISH": "Finish",
   "HISTORY": "History",
-  "LOGOUT": "Logout"
+  "LOGOUT": "Logout",
+  "THEME": "Theme",
+  "SELECT_THEME": "Select theme",
+  "LIGHT": "Light",
+  "DARK": "Dark",
+  "SYSTEM": "System"
 }
