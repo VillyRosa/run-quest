@@ -24,5 +24,6 @@
   "SELECT_THEME": "Select theme",
   "LIGHT": "Light",
   "DARK": "Dark",
-  "SYSTEM": "System"
+  "SYSTEM": "System",
+  "DELETE_MY_ACCOUNT": "Delete My Account"
 }
