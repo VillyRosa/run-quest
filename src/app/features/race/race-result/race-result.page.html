@@ -11,21 +11,23 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <h3>5.12</h3>
-        <span>km</span>
-      </ion-col>
-      <hr>
-      <ion-col>
-        <h5>00:27:45</h5>
-        <span>Duração</span>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  @if ((run$ | async); as run) {
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3>{{ run.distance | number: '1.2-2' }}</h3>
+          <span>km</span>
+        </ion-col>
+        <hr>
+        <ion-col>
+          <h5>{{ run.duration | secondsToTime }}</h5>
+          <span>Duração</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <p>15 de Abril de 2025</p>
+    <p>{{ run.createdAt | date: 'dd/MM/yyyy' }}</p>
+  }
 
   <ion-button expand="block" routerLink="/">Voltar para o Início</ion-button>
 </ion-content>
