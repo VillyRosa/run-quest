@@ -4,10 +4,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding" [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Segurança</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item [button]="true" routerLink="/profile/security/change-password">
+      <ion-icon slot="start" name="lock-closed-outline" size="medium"></ion-icon>
+      <ion-label>Alterar senha</ion-label>
+      <ion-icon slot="end" name="chevron-forward" size="medium"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -4,6 +4,7 @@ import { AccountPage } from "../features/profile/account/account.page";
 import { RunHistoryPage } from "../features/profile/run-history/run-history.page";
 import { ConfigPage } from "../features/profile/config/config.page";
 import { SecurityPage } from "../features/profile/security/security.page";
+import { ChangePasswordPage } from "../features/profile/security/change-password/change-password.page";
 
 export const profileRoutes: Routes = [
   { path: 'profile', component: ProfilePage },
@@ -11,4 +12,5 @@ export const profileRoutes: Routes = [
   { path: 'profile/run-history', component: RunHistoryPage },
   { path: 'profile/config', component: ConfigPage },
   { path: 'profile/security', component: SecurityPage },
+  { path: 'profile/security/change-password', component: ChangePasswordPage },
 ];
