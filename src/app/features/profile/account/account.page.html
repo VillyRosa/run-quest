@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Conta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-input formControlName="username" label="User Name" labelPlacement="floating" placeholder="John Doe"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName="email" label="E-mail" labelPlacement="floating" placeholder="john.doe@me.com"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button type="submit" class="ion-margin-top" expand="block">Salvar</ion-button>
+  </form>
+</ion-content>

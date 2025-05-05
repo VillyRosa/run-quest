@@ -13,8 +13,8 @@ export class MeService {
     return this.http.get<User>('/users/me');
   }
 
-  public updateMyAccount(user: User): Observable<User> {
-    return this.http.put<User>('/users/me', user);
+  public updateMyAccount(username: string, email: string): Observable<User> {
+    return this.http.put<User>('/users/me', { username, email });
   }
 
   public updateMyPassword(password: string, confirmPassword: string): Observable<void> {
