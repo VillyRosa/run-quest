@@ -17,5 +17,18 @@
       <ion-label>Alterar senha</ion-label>
       <ion-icon slot="end" name="chevron-forward" size="medium"></ion-icon>
     </ion-item>
+
+    <ion-item [button]="true" id="delete-account-alert">
+      <ion-icon slot="start" name="alert-circle-outline" size="medium"></ion-icon>
+      <ion-label>{{ 'DELETE_MY_ACCOUNT' | translate }}</ion-label>
+      <ion-icon slot="end" name="chevron-forward" size="medium"></ion-icon>
+    </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-alert
+  trigger="delete-account-alert"
+  header="Cuidado!"
+  message="Deseja mesmo deletar sua conta? Esta ação não tem volta"
+  [buttons]="deleteAccountAlertButtons"
+></ion-alert>

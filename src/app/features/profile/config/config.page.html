@@ -26,14 +26,5 @@
         <ion-select-option value="system">{{ 'SYSTEM' | translate }}</ion-select-option>
       </ion-select>
     </ion-item>
-
-    <ion-button id="delete-account-alert">{{ 'DELETE_MY_ACCOUNT' | translate }}</ion-button>
   </ion-list>
 </ion-content>
-
-<ion-alert
-  trigger="delete-account-alert"
-  header="Cuidado!"
-  message="Deseja mesmo deletar sua conta? Esta ação não tem volta"
-  [buttons]="deleteAccountAlertButtons"
-></ion-alert>
