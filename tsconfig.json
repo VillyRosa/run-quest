@@ -22,7 +22,8 @@
     "useDefineForClassFields": false,
     "paths": {
       "@config/*": ["./src/app/config/*"],
-      "@features/*": ["./src/app/features/*"]
+      "@features/*": ["./src/app/features/*"],
+      "@guards/*": ["./src/app/guards/*"],
     }
   },
   "angularCompilerOptions": {

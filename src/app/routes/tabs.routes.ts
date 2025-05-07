@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { authGuard } from "../guards/auth.guard";
+import { authGuard } from "@guards/auth.guard";
 import { TabsPage } from "../layout/tabs/tabs.page";
 import { homeRoutes } from "./home.routes";
 import { profileRoutes } from "./profile.routes";
