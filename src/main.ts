@@ -6,7 +6,7 @@ import { routes } from './app/routes/app.routes';
 import { AppComponent } from './app/app.component';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideTranslation } from '@config/translate.config';
-import { apiPrefixInterceptor } from './app/interceptors/api-prefix.interceptor';
+import { apiPrefixInterceptor } from '@interceptors/api-prefix.interceptor';
 
 bootstrapApplication(AppComponent, {
   providers: [

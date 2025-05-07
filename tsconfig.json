@@ -24,6 +24,7 @@
       "@config/*": ["./src/app/config/*"],
       "@features/*": ["./src/app/features/*"],
       "@guards/*": ["./src/app/guards/*"],
+      "@interceptors/*": ["./src/app/interceptors/*"],
     }
   },
   "angularCompilerOptions": {
