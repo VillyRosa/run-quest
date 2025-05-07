@@ -26,6 +26,7 @@
       "@guards/*": ["./src/app/guards/*"],
       "@interceptors/*": ["./src/app/interceptors/*"],
       "@layout/*": ["./src/app/layout/*"],
+      "@pages/*": ["./src/app/pages/*"],
     }
   },
   "angularCompilerOptions": {
