@@ -46,7 +46,7 @@ export class ForgotPasswordPage {
       next: () => {
         this.toastService.success('Código enviado com sucesso!');
         this.form.reset();
-        this.router.navigate(['/verify-reset-code']);
+        this.router.navigate(['/verify-reset-code'], { queryParams: { email } });
       },
       error: () => {
         this.toastService.error('Erro ao tentar solicitar redefinição de senha. Tente novamente.');
