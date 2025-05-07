@@ -55,4 +55,16 @@ export class AuthService {
     this.router.navigate(['/auth-start']);
     this.toastService.success(this.translate.instant('LOGOUT_SUCCESS') + '!');
   }
+
+  public resetPasswordRequest(email: string): Observable<void> {
+    return this.http.post<void>('auth/reset-password/request', { email });
+  }
+
+  public resetPasswordVerify(email: string, code: string): Observable<string> {
+    return this.http.post<string>('auth/reset-password/verify', { email, code }, { responseType: 'text' as 'json' });
+  }
+
+  public resetPasswordConfirm(token: string, password: string, confirmPassword: string): Observable<void> {
+    return this.http.post<void>('auth/reset-password/confirm', { password, confirmPassword }, { headers: { Authorization: `Bearer ${token}` } });
+  }
 }
