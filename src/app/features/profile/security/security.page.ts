@@ -4,7 +4,7 @@ import { IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonIcon,
 import { addIcons } from 'ionicons';
 import { chevronForward, lockClosedOutline, alertCircleOutline } from 'ionicons/icons';
 import { RouterModule } from '@angular/router';
-import { MeService } from 'src/app/shared/services/me.service';
+import { MeService } from '@shared/services/me.service';
 import { AuthService } from '@features/auth/auth.service';
 import { TranslateModule } from '@ngx-translate/core';
 

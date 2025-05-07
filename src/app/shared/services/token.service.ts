@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DecodedToken } from '../models/DecodedToken';
+import { DecodedToken } from '@shared/models/DecodedToken';
 import { jwtDecode } from 'jwt-decode';
 
 @Injectable({

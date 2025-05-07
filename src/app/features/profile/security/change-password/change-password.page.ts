@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MeService } from 'src/app/shared/services/me.service';
-import { ToastService } from 'src/app/shared/services/toast.service';
+import { MeService } from '@shared/services/me.service';
+import { ToastService } from '@shared/services/toast.service';
 import { LoadingController } from '@ionic/angular';
 import { IonHeader, IonItem, IonContent, IonToolbar, IonTitle, IonInput, IonButton, IonInputPasswordToggle } from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';

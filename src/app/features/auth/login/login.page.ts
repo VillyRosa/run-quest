@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IonContent, IonButton, IonInput, IonItem, IonInputPasswordToggle } from '@ionic/angular/standalone';
 import { AuthService } from '../auth.service';
-import { ToastService } from 'src/app/shared/services/toast.service';
+import { ToastService } from '@shared/services/toast.service';
 import { RouterModule } from '@angular/router';
 
 @Component({

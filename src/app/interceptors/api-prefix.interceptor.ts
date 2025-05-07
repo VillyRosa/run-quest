@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { TokenService } from '../shared/services/token.service';
+import { TokenService } from '@shared/services/token.service';
 
 export const apiPrefixInterceptor: HttpInterceptorFn = (req, next) => {
   const isFullUrl = req.url.startsWith('http');

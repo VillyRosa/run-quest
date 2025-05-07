@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IonContent, IonItem, IonInput, IonButton, IonInputPasswordToggle } from '@ionic/angular/standalone';
 import { AuthService } from '../auth.service';
-import { ToastService } from 'src/app/shared/services/toast.service';
+import { ToastService } from '@shared/services/toast.service';
 
 @Component({
   selector: 'app-register',

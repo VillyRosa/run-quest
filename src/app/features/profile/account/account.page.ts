@@ -2,10 +2,10 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonInput, IonButton } from '@ionic/angular/standalone';
-import { MeService } from 'src/app/shared/services/me.service';
+import { MeService } from '@shared/services/me.service';
 import { LoadingController } from '@ionic/angular';
-import { ToastService } from 'src/app/shared/services/toast.service';
-import { User } from 'src/app/shared/models/User';
+import { ToastService } from '@shared/services/toast.service';
+import { User } from '@shared/models/User';
 
 @Component({
   selector: 'app-account',

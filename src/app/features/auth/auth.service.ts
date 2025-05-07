@@ -1,12 +1,12 @@
 import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastService } from '../../shared/services/toast.service';
+import { ToastService } from '@shared/services/toast.service';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { LoadingController } from '@ionic/angular';
-import { TokenService } from 'src/app/shared/services/token.service';
+import { TokenService } from '@shared/services/token.service';
 import { Observable } from 'rxjs';
-import { User } from 'src/app/shared/models/User';
+import { User } from '@shared/models/User';
 import { Register } from './Register';
 
 @Injectable({

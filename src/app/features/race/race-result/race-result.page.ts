@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RaceService } from '../race.service';
-import { SecondsToTimePipe } from 'src/app/shared/pipes/seconds-to-time.pipe';
+import { SecondsToTimePipe } from '@shared/pipes/seconds-to-time.pipe';
 
 @Component({
   selector: 'app-race-result',

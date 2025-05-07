@@ -1,9 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { RacePage } from 'src/app/shared/models/RacePage';
-import { Race } from 'src/app/shared/models/Race';
-import { NewRace } from 'src/app/shared/models/NewRace';
+import { RacePage } from '@shared/models/RacePage';
+import { Race } from '@shared/models/Race';
+import { NewRace } from '@shared/models/NewRace';
 
 @Injectable({
   providedIn: 'root'

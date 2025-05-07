@@ -4,7 +4,7 @@ import { firstValueFrom, Observable, race, take } from 'rxjs';
 import { RunGeoService } from './run-geo.service';
 import { RaceService } from './race.service';
 import { LoadingController } from '@ionic/angular';
-import { NewRace } from 'src/app/shared/models/NewRace';
+import { NewRace } from '@shared/models/NewRace';
 
 @Injectable({
   providedIn: 'root'

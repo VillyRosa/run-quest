@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonSelect, IonSelectOption } from '@ionic/angular/standalone';
-import { LanguageService } from 'src/app/shared/services/language.service';
+import { LanguageService } from '@shared/services/language.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { ThemeService } from 'src/app/shared/services/theme.service';
+import { ThemeService } from '@shared/services/theme.service';
 
 @Component({
   selector: 'app-config',
