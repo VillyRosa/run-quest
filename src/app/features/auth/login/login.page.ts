@@ -4,13 +4,14 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { IonContent, IonButton, IonInput, IonItem, IonInputPasswordToggle } from '@ionic/angular/standalone';
 import { AuthService } from 'src/app/features/auth/auth.service';
 import { ToastService } from 'src/app/shared/services/toast.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonItem, IonInput, IonButton, IonContent, CommonModule, FormsModule, IonInputPasswordToggle, ReactiveFormsModule]
+  imports: [IonItem, IonInput, IonButton, IonContent, CommonModule, FormsModule, IonInputPasswordToggle, ReactiveFormsModule, RouterModule]
 })
 export class LoginPage {
   private authService = inject(AuthService);
