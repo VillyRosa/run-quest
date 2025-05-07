@@ -27,6 +27,7 @@
       "@interceptors/*": ["./src/app/interceptors/*"],
       "@layout/*": ["./src/app/layout/*"],
       "@pages/*": ["./src/app/pages/*"],
+      "@routes/*": ["./src/app/routes/*"],
     }
   },
   "angularCompilerOptions": {
