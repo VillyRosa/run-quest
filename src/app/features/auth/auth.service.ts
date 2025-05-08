@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ToastService } from '@shared/services/toast.service';
 import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular/standalone';
 import { TokenService } from '@shared/services/token.service';
 import { Observable } from 'rxjs';
 import { User } from '@shared/models/User';

@@ -3,7 +3,7 @@ import { RunTimerService } from './run-timer.service';
 import { firstValueFrom, Observable, race, take } from 'rxjs';
 import { RunGeoService } from './run-geo.service';
 import { RaceService } from './race.service';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular/standalone';
 import { NewRace } from '@shared/models/NewRace';
 
 @Injectable({

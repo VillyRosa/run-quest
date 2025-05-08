@@ -2,8 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MeService } from '@shared/services/me.service';
 import { ToastService } from '@shared/services/toast.service';
-import { LoadingController } from '@ionic/angular';
-import { IonHeader, IonItem, IonContent, IonToolbar, IonTitle, IonInput, IonButton, IonInputPasswordToggle } from "@ionic/angular/standalone";
+import { IonHeader, IonItem, IonContent, IonToolbar, IonTitle, IonInput, IonButton, IonInputPasswordToggle, LoadingController } from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
