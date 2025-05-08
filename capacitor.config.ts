@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'run-quest',
+  appId: 'run.runquest.app',
+  appName: 'Run Quest',
   webDir: 'www'
 };
 
