@@ -4,5 +4,12 @@
   <ion-button expand="block" routerLink="/profile/run-history">{{ 'HISTORY' | translate }}</ion-button>
   <ion-button expand="block" routerLink="/profile/config">{{ 'CONFIGURATIONS' | translate }}</ion-button>
   <ion-button expand="block" routerLink="/profile/security">Segurança</ion-button>
-  <ion-button expand="block" (click)="onLogout()">{{ 'LOGOUT' | translate }}</ion-button>
+  <ion-button expand="block" id="logout-alert">{{ 'LOGOUT' | translate }}</ion-button>
 </ion-content>
+
+<ion-alert
+  trigger="logout-alert"
+  header="Aviso"
+  message="Você tem certeza que deseja sair?"
+  [buttons]="logoutAlertButtons"
+></ion-alert>
