@@ -17,8 +17,8 @@ export class MeService {
     return this.http.put<User>('/users/me', { username, email });
   }
 
-  public updateMyPassword(password: string, confirmPassword: string): Observable<void> {
-    return this.http.put<void>('/users/me/password', { password, confirmPassword });
+  public updateMyPassword(password: string, newPassword: string, confirmPassword: string): Observable<void> {
+    return this.http.put<void>('/users/me/password', { password, newPassword, confirmPassword });
   }
 
   public deleteMyAccount(): Observable<void> {

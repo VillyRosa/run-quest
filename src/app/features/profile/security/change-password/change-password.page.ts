@@ -47,7 +47,7 @@ export class ChangePasswordPage {
     const loading = await this.loadingCtrl.create();
     await loading.present();
 
-    this.meService.updateMyPassword(newPassword, confirmPassword).subscribe({
+    this.meService.updateMyPassword(currentPassword, newPassword, confirmPassword).subscribe({
       next: () => {
         this.toastService.success('Senha atualizada com sucesso!');
         this.form.reset();
