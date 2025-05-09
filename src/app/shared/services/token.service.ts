@@ -53,4 +53,13 @@ export class TokenService {
     const now = Date.now() / 1000;
     return decoded.exp < now;
   }
+
+  public static isAuthenticated(): boolean {
+    const token = this.getToken();
+
+    if (token && !this.isTokenExpired()) return true;
+
+    if (token) this.removeToken();
+    return false;
+  }
 }
