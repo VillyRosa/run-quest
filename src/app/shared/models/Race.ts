@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { PublicUser } from "./PublicUser";
 
 export interface Race {
   id: string;
@@ -6,7 +6,7 @@ export interface Race {
   duration: number;
   startTime: string;
   endTime: string;
-  user: User;
+  user: PublicUser;
   createdAt: string;
   updatedAt: string;
 };
