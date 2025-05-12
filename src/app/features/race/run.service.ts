@@ -1,9 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { RunTimerService } from './run-timer.service';
-import { firstValueFrom, Observable, race, take } from 'rxjs';
+import { Observable } from 'rxjs';
 import { RunGeoService } from './run-geo.service';
-import { RaceService } from './race.service';
-import { LoadingController } from '@ionic/angular/standalone';
 import { NewRace } from '@shared/models/NewRace';
 
 @Injectable({
@@ -12,8 +10,6 @@ import { NewRace } from '@shared/models/NewRace';
 export class RunService {
   private timerService = inject(RunTimerService);
   private geoService = inject(RunGeoService);
-  private raceService = inject(RaceService);
-  private loadingCtrl = inject(LoadingController);
 
   public start(): void {
     this.timerService.startTimer();
@@ -22,7 +18,7 @@ export class RunService {
 
   public pause(): void {
     this.timerService.pauseTimer();
-    this.geoService.stopTracking();
+    this.geoService.pauseTracking();
   }
 
   public stop(): void {
@@ -30,35 +26,17 @@ export class RunService {
     this.geoService.stopTracking();
   }
 
-  public async finishRun(): Promise<string> {
-    const loading = await this.loadingCtrl.create({ message: 'Salvando corrida...' });
-    await loading.present();
-
-    try {
-      const newRace: NewRace = {
-        distance: this.geoService.getCurrentDistance(),
-        duration: this.timerService.getElapsedSeconds(),
-        startTime: new Date(Date.now() - this.timerService.getElapsedSeconds() * 1000).toISOString(),
-        endTime: new Date().toISOString()
-      };
-
-      this.pause();
-
-      const race = await firstValueFrom(
-        this.raceService.create(newRace).pipe(take(1))
-      );
-
-      return race.id;
-    } catch (error) {
-      console.error('Error finishing run:', error);
-      throw error;
-    } finally {
-      await loading.dismiss();
-    }
+  public createNewRaceObject(): NewRace {
+    return {
+      distance: this.geoService.getCurrentDistance(),
+      duration: this.timerService.getElapsedSeconds(),
+      startTime: new Date(Date.now() - this.timerService.getElapsedSeconds() * 1000).toISOString(),
+      endTime: new Date().toISOString()
+    };
   }
 
   public reset(): void {
-    this.timerService.resetTimer();
+    this.timerService.stopTimer();
     this.geoService.stopTracking();
   }
 

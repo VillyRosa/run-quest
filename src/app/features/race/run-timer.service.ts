@@ -28,6 +28,11 @@ export class RunTimerService {
   }
 
   public resetTimer(): void {
+    this.stopTimer();
+    this.startTimer();
+  }
+
+  public stopTimer(): void {
     this.pauseTimer();
     this.elapsedSeconds = 0;
     this.timer$.next(this.elapsedSeconds);

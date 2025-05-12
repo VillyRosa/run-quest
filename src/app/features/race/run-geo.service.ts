@@ -38,6 +38,13 @@ export class RunGeoService {
     );
   }
 
+  public pauseTracking(): void {
+    if (this.watchId) {
+      Geolocation.clearWatch({ id: this.watchId });
+      this.watchId = null;
+    }
+  }
+
   public stopTracking(): void {
     if (this.watchId) {
       Geolocation.clearWatch({ id: this.watchId });

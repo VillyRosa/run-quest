@@ -8,5 +8,21 @@
       <h3>{{ timer$ | async }}</h3>
     </div>
   </div>
-  <ion-button expand="block" (click)="onFinish()">{{ 'FINISH' | translate }}</ion-button>
+  <ion-button expand="block" (click)="onToggleActive()">{{ active ? 'Pausar' : 'Voltar' }}</ion-button>
+  <ion-button expand="block" id="finish-race-alert">{{ 'FINISH' | translate }}</ion-button>
+  <ion-button expand="block" color="danger" id="cancel-race-alert">Cancelar</ion-button>
 </ion-content>
+
+<ion-alert
+  trigger="finish-race-alert"
+  header="Alerta"
+  message="Você tem certeza que deseja finalizar a corrida?"
+  [buttons]="finishRaceAlertButtons"
+></ion-alert>
+
+<ion-alert
+  trigger="cancel-race-alert"
+  header="Alerta"
+  message="Você tem certeza que deseja cancelar a corrida?"
+  [buttons]="cancelRaceAlertButtons"
+></ion-alert>
