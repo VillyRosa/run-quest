@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">run-quest</string>
-    <string name="title_activity_main">run-quest</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">Run Quest</string>
+    <string name="title_activity_main">Run Quest</string>
+    <string name="package_name">run.runquest.app</string>
+    <string name="custom_url_scheme">run.runquest.app</string>
 </resources>

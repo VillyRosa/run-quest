@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package run.runquest.app;
 
 import com.getcapacitor.BridgeActivity;
 
