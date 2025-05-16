@@ -25,5 +25,8 @@
   "LIGHT": "Light",
   "DARK": "Dark",
   "SYSTEM": "System",
-  "DELETE_MY_ACCOUNT": "Delete My Account"
+  "DELETE_MY_ACCOUNT": "Delete My Account",
+  "ACCOUNT": "Account",
+  "SAVE": "Save",
+  "USER_NAME": "User name"
 }

@@ -5,13 +5,14 @@ import { IonContent, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonInput
 import { MeService } from '@shared/services/me.service';
 import { ToastService } from '@shared/services/toast.service';
 import { User } from '@shared/models/User';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.page.html',
   styleUrls: ['./account.page.scss'],
   standalone: true,
-  imports: [IonButton, IonInput, IonItem, IonList, IonTitle, IonToolbar, IonHeader, IonContent, CommonModule, FormsModule, ReactiveFormsModule]
+  imports: [IonButton, IonInput, IonItem, IonList, IonTitle, IonToolbar, IonHeader, IonContent, CommonModule, FormsModule, ReactiveFormsModule, TranslateModule]
 })
 export class AccountPage implements OnInit {
   private fb = inject(FormBuilder);
